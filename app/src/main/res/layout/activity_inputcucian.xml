@@ -139,7 +139,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputjeniscuci" />
     <EditText
-        android:id="@+id/inputpewangicuci"
+        android:id="@+id/inputvariancuci"
         android:layout_width="234dp"
         android:layout_height="31dp"
         android:hint="Varian"
