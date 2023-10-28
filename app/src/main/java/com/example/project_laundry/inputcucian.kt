@@ -5,7 +5,6 @@ import android.os.Bundle
 import com.example.project_laundry.ROOM.Laundry
 import com.example.project_laundry.ROOM.database_laundry
 import com.example.project_laundry.databinding.ActivityInputcucianBinding
-import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -27,7 +26,7 @@ class inputcucian : AppCompatActivity() {
         CoroutineScope(Dispatchers.IO).launch {
             db.laundrydao().simpan(
                 Laundry(
-                    id = 0,
+                    idcuci = 0,
                     binding.inputnamacuci.text.toString(),
                     binding.inputnocuci.text.toString().toInt(),
                     binding.inputberatcuci.text.toString(),
