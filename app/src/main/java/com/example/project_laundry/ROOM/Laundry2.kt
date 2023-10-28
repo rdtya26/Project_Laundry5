@@ -16,8 +16,6 @@ data class Laundry2(
     @ColumnInfo(name = "Berat")
     val berat : String,
     @ColumnInfo(name = "Jenis_Layanan")
-    val jenis : String,
-    @ColumnInfo(name = "Detail")
     val detail : String,
     @ColumnInfo(name = "Pewangi")
     val pewangi :String

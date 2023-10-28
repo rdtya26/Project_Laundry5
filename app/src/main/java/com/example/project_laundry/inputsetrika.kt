@@ -30,7 +30,6 @@ class inputsetrika : AppCompatActivity() {
                     binding.inputsetrikanama.text.toString(),
                     binding.inputnosetrika.text.toString().toInt(),
                     binding.inputberatsetrika.text.toString(),
-                    binding.inputjenissetrika.text.toString(),
                     binding.inputdetailsetrika.text.toString(),
                     binding.inputpewangisetrika.text.toString()
                 )
