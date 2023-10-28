@@ -22,11 +22,12 @@ class adapterlaundry (var list: ArrayList<adapterlaundry>):
             }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): laundryholder {
-    val view = LayoutInflater.from(parent.context).inflate(
-        R.layout.adapter,parent,false
+       val view = LayoutInflater.from(parent.context).inflate(
+        R.layout.adapter
+            ,parent
+            ,false
     )
-        return  laundryholder(view)
-    }
+        return laundryholder(view)}
 
     override fun onBindViewHolder(holder: laundryholder, position: Int) {
 

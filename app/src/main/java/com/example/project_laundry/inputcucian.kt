@@ -31,7 +31,6 @@ class inputcucian : AppCompatActivity() {
                     binding.inputnamacuci.text.toString(),
                     binding.inputnocuci.text.toString().toInt(),
                     binding.inputberatcuci.text.toString(),
-                    binding.inputjeniscuci.text.toString(),
                     binding.inputdetailcuci.text.toString(),
                     binding.inputvariancuci.text.toString()
                 )
