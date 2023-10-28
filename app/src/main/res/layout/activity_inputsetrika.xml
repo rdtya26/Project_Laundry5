@@ -117,17 +117,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputnosetrika" />
     <EditText
-        android:id="@+id/inputjenissetrika"
-        android:layout_width="234dp"
-        android:layout_height="31dp"
-        android:background="@drawable/bgbiru"
-        android:hint="Jenis"
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputberatsetrika" />
-    <EditText
         android:id="@+id/inputdetailsetrika"
         android:layout_width="234dp"
         android:layout_height="31dp"
@@ -137,7 +126,7 @@
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputjenissetrika" />
+        app:layout_constraintTop_toBottomOf="@id/inputberatsetrika" />
     <EditText
         android:id="@+id/inputpewangisetrika"
         android:layout_width="234dp"
