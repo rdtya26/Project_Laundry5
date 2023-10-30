@@ -31,6 +31,11 @@ class adapterlaundry (val list: ArrayList<adapterlaundry>)
         }
 
         override fun onBindViewHolder(holder: laundryholder, position: Int) {
+            holder.NAMA.text  = list[position].toString()
+            holder.JENIS.text = list[position].toString()
+            holder.ESTIMASI.text = list[position].toString()
+
+
 
 
 
