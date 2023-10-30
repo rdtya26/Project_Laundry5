@@ -8,6 +8,7 @@ import androidx.room.PrimaryKey
 @Entity ("TB_AntrianSetrika")
 data class Laundry2(
     @PrimaryKey (autoGenerate = true)
+    @ColumnInfo (name ="idsetrika")
     val id : Int,
     @ColumnInfo(name = "Nama")
     val nama : String,
@@ -15,7 +16,9 @@ data class Laundry2(
     val no : Int,
     @ColumnInfo(name = "Berat")
     val berat : String,
-    @ColumnInfo(name = "Jenis_Layanan")
+    @ColumnInfo (name = "Jenis")
+    val jenis : String,
+    @ColumnInfo(name = "Detail")
     val detail : String,
     @ColumnInfo(name = "Pewangi")
     val pewangi :String

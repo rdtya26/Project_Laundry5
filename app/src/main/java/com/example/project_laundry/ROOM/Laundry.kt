@@ -15,6 +15,8 @@ data class Laundry(
     val No : Int,
     @ColumnInfo (name = "Berat")
     val berat : String,
+    @ColumnInfo (name = "jenis")
+    val jenis : String,
     @ColumnInfo (name = "detail")
     val Detail : String,
     @ColumnInfo (name = "pewangi")

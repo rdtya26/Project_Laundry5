@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import com.example.project_laundry.R
 
-class adapterlaundry (val list: ArrayList<adapterlaundry>)
-    :RecyclerView.Adapter<adapterlaundry.laundryholder>(){
+class adapterlaundry(val list: ArrayList<Laundry>, var Listener: OnClickListener):
+    RecyclerView.Adapter<adapterlaundry.laundryholder>(){
 
         class laundryholder(view: View) : RecyclerView.ViewHolder(view) {
             val NAMA = itemView.findViewById<TextView>(R.id.nameadapter)
@@ -31,19 +31,24 @@ class adapterlaundry (val list: ArrayList<adapterlaundry>)
         }
 
         override fun onBindViewHolder(holder: laundryholder, position: Int) {
-            holder.NAMA.text  = list[position].toString()
-            holder.JENIS.text = list[position].toString()
-            holder.ESTIMASI.text = list[position].toString()
-
-
-
-
-
+            holder.NAMA.text  = list[position].namacuci
+            holder.JENIS.text = list[position].jenis
+            holder.ESTIMASI.text = list[position].Detail
+            holder.TITIK3.setOnClickListener(){
+                Listener.onDetail(list[position])}
+            holder.EDIT.setOnClickListener(){
+                Listener.onEdit(list[position])
+            }
         }
 
         override fun getItemCount(): Int {
             return list.size
         }
+
+    interface OnClickListener{
+        fun onDetail (laundry: Laundry)
+        fun onEdit (laundry: Laundry)
+    }
     }
 
 
