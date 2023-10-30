@@ -37,6 +37,7 @@
         android:src="@drawable/backgroundbiru"/>
 
         <ImageButton
+            android:id="@+id/imgcuci"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="@id/logolaundry"
@@ -55,6 +56,7 @@
         android:src="@drawable/backgroundbiru"/>
 
         <ImageButton
+            android:id="@+id/imgsetrika"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/backbiru"
