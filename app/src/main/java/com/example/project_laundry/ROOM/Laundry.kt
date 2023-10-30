@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey
 @Entity("TB_antriancuci")
 data class Laundry(
     @PrimaryKey (autoGenerate = true)
+    @ColumnInfo(name = "idcucian")
     val idcuci : Int,
     @ColumnInfo(name = "Nama")
     val namacuci: String,

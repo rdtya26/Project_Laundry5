@@ -4,7 +4,6 @@ import androidx.room.*
 
 @Dao
 interface LaundryDAO {
-
     //laundrycuci
     @Insert
     fun simpan(laundry: Laundry)
@@ -37,6 +36,9 @@ interface LaundryDAO {
     //Register
     @Insert
     fun simpanregis(register: Register)
+
+
+
 
 
 
