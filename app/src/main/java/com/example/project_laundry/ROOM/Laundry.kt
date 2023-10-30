@@ -7,14 +7,13 @@ import androidx.room.PrimaryKey
 @Entity("TB_antriancuci")
 data class Laundry(
     @PrimaryKey (autoGenerate = true)
-    val id : Int,
+    val idcuci : Int,
     @ColumnInfo(name = "Nama")
-    val nama: String,
+    val namacuci: String,
     @ColumnInfo (name = "No_Hp")
     val No : Int,
     @ColumnInfo (name = "Berat")
     val berat : String,
-
     @ColumnInfo (name = "detail")
     val Detail : String,
     @ColumnInfo (name = "pewangi")
