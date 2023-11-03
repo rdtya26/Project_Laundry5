@@ -1,8 +1,10 @@
 package com.example.project_laundry
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager.VERTICAL
@@ -39,10 +41,10 @@ class tampildata : AppCompatActivity() {
         }
 
         )
-        binding.list.adapter = adapterlaundry
-        binding.list.layoutManager = LinearLayoutManager(applicationContext,
+        binding.listcuci.adapter = adapterlaundry
+        binding.listcuci.layoutManager = LinearLayoutManager(applicationContext,
         VERTICAL,false)
-        binding.list.addItemDecoration(
+        binding.listcuci.addItemDecoration(
             DividerItemDecoration(
                 applicationContext,LinearLayoutManager.VERTICAL
             )
@@ -55,18 +57,47 @@ class tampildata : AppCompatActivity() {
         }
     }
     private fun detail(laundry: Laundry){
-        startActivity(Intent(this,detail::class.java).
-        putExtra("idcucian", Laundry.idcuci.toString()))
+        val dialog = AlertDialog.Builder(this)
+        dialog.apply {
+            setTitle("detail")
+            setMessage("lihat detail laundry mu")
+            setNegativeButton("batal"){
+                dialogInterface:DialogInterface,i:Int->
+                dialogInterface.dismiss()
+            }
+            setPositiveButton("Edit"){
+                    dialogInterface:DialogInterface,i:Int->
+                dialogInterface.dismiss()
+            }
+        }
+        startActivity(Intent(this,detail::class.java))
     }
 
     private fun updateData(laundry: Laundry){
-        startActivity(Intent(this,edit_laundry::class.java).
-        putExtra("idcucian",Laundry.idcuci.toString()))
+       val dialog = AlertDialog.Builder(this)
+        dialog.apply {
+            setTitle("konfirmasi edit laundry")
+            setMessage("apakah kamu yakin akan mengubah data ${laundry.idcuci}?")
+            setNegativeButton("batal"){
+                dialogInterface:DialogInterface,i:Int->
+                dialogInterface.dismiss()
+            }
+            setPositiveButton("Edit"){
+                dialogInterface:DialogInterface,i:Int->
+                dialogInterface.dismiss()
+                CoroutineScope(Dispatchers.IO).launch {
+                    db.laundrydao().ubah(laundry)
+                    finish()
+                    startActivity(intent)
+                }
+            }
+            dialog.show()
+        }
     }
 
 
     fun getdata(){
-        binding.list.layoutManager = LinearLayoutManager(this)
+        binding.listcuci.layoutManager = LinearLayoutManager(this)
         CoroutineScope(Dispatchers.IO).launch {
             val data = db.laundrydao().getAll()
             adapterlaundry.list.addAll(data)
@@ -74,10 +105,11 @@ class tampildata : AppCompatActivity() {
                 adapterlaundry.notifyDataSetChanged()
             }
             }
-        binding.list.adapter = adapterlaundry
+        binding.listcuci.adapter = adapterlaundry
         }
     override fun onResume() {
         super.onResume()
         getdata()
+
     }
     }

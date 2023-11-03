@@ -46,8 +46,8 @@ class adaptersetrikalaundry(val list: ArrayList<Laundry2>, var Listener: OnClick
         }
 
     interface OnClickListener{
-        fun onDetail (laundry: Laundry)
-        fun onEdit (laundry: Laundry)
+        fun onDetail (laundry2: Laundry2)
+        fun onEdit (laundry2: Laundry2)
     }
     }
 
