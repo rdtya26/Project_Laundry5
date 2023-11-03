@@ -12,7 +12,7 @@ abstract class database_laundry : RoomDatabase(){
     companion object{
 
         @Volatile
-        private var instance: database_laundry? = null
+        var instance: database_laundry? = null
         private val LOCK = Any()
 
         operator fun invoke(context: Context) = instance ?: synchronized(LOCK){

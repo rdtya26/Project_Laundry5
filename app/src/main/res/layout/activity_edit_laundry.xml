@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/texteditname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/gelembung"
@@ -86,66 +86,72 @@
     <EditText
         android:id="@+id/inputnamaedit"
         android:layout_width="234dp"
-        android:layout_height="31dp"
-        android:hint="Nama"
-        android:gravity="center"
+        android:layout_height="48dp"
+        android:layout_marginTop="184dp"
         android:background="@drawable/bgbiru"
-        android:layout_marginTop="220dp"
+        android:gravity="center"
+        android:hint="Nama"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/inputnoedit"
         android:layout_width="234dp"
-        android:layout_height="31dp"
-        android:hint="No HP"
-        android:gravity="center"
-        android:background="@drawable/bgbiru"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/bgbiru"
+        android:gravity="center"
+        android:hint="No HP"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputnamaedit" />
+
     <EditText
         android:id="@+id/inputberatedit"
         android:layout_width="234dp"
-        android:layout_height="31dp"
-        android:hint="Berat"
-        android:gravity="center"
-        android:background="@drawable/bgbiru"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/bgbiru"
+        android:gravity="center"
+        android:hint="Berat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputnoedit" />
+
     <EditText
         android:id="@+id/inputjenisedit"
         android:layout_width="234dp"
-        android:layout_height="31dp"
-        android:hint="Jenis"
-        android:gravity="center"
-        android:background="@drawable/bgbiru"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/bgbiru"
+        android:gravity="center"
+        android:hint="Jenis"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputberatedit" />
+
     <EditText
         android:id="@+id/inputdetailedit"
         android:layout_width="234dp"
-        android:layout_height="31dp"
-        android:hint="Detail Pakaian"
-        android:gravity="center"
-        android:background="@drawable/bgbiru"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/bgbiru"
+        android:gravity="center"
+        android:hint="Detail Pakaian"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputjenisedit" />
+
     <EditText
         android:id="@+id/inputpewangiedit"
         android:layout_width="234dp"
-        android:layout_height="31dp"
-        android:hint="Varian"
-        android:gravity="center"
-        android:background="@drawable/bgbiru"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/bgbiru"
+        android:gravity="center"
+        android:hint="Varian"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputdetailedit" />
@@ -153,14 +159,15 @@
     <Button
         android:id="@+id/editlaundry"
         android:layout_width="140dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:backgroundTint="#0D4394"
         android:text="input"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78" />
+        app:layout_constraintVertical_bias="0.859" />
 
     <ImageButton
         android:id="@+id/backedit"
