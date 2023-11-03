@@ -117,17 +117,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputnocuci" />
 
-    <EditText
-        android:id="@+id/inputjeniscuci"
+
+
+    <Spinner
+        android:id="@+id/planets_spinner"
         android:layout_width="234dp"
         android:layout_height="31dp"
-        android:hint="jenis"
-        android:gravity="center"
-        android:background="@drawable/bgbiru"
         android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/bgbiru"
+        android:spinnerMode="dropdown"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputberatcuci" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputberatcuci"/>
 
 
     <EditText
@@ -140,7 +142,7 @@
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputjeniscuci" />
+        app:layout_constraintTop_toBottomOf="@id/planets_spinner" />
     <EditText
         android:id="@+id/inputvariancuci"
         android:layout_width="234dp"
