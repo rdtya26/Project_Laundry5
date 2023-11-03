@@ -28,7 +28,7 @@ class register : AppCompatActivity() {
         etPass = findViewById(R.id.hintpass)
         btnDaftar = findViewById(R.id.btndaftar)
 
-        register = register.register
+
 
         btnDaftar.setOnClickListener {
             Daftar()

@@ -29,12 +29,11 @@ class tampildata : AppCompatActivity() {
 
         adapterlaundry = adapterlaundry(arrayListOf(),
             object : adapterlaundry.OnClickListener{
-            override fun ondetail(laundry: Laundry) {
-                detail(laundry)
+                override fun onDetail(laundry: Laundry) {
+                   detail(laundry)
+                }
 
-            }
-
-            override fun onEdit(laundry: Laundry) {
+                override fun onEdit(laundry: Laundry) {
                 updateData(laundry)
             }
         }

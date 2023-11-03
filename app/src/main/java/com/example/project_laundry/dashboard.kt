@@ -10,12 +10,10 @@ class dashboard : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
-        // register all the ImageButtons with their appropriate IDs
         val cuci: ImageButton = findViewById(R.id.imgcuci)
         val setrika: ImageButton = findViewById(R.id.imgsetrika)
 
 
-        // handle each of the image buttons with the OnClickListener
         cuci.setOnClickListener {
             Toast.makeText(this, "cuci button", Toast.LENGTH_SHORT).show()
         }
