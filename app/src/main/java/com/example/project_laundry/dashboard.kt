@@ -1,5 +1,6 @@
 package com.example.project_laundry
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
@@ -20,7 +21,9 @@ class dashboard : AppCompatActivity() {
         setrika.setOnClickListener {
             Toast.makeText(this, "setrika button", Toast.LENGTH_SHORT).show()
         }
-
+        startActivity(
+                Intent(this, register::class.java)
+        )
 
     }
 }

@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
 import com.example.project_laundry.ROOM.adapterlaundry
 import com.example.project_laundry.ROOM.database_laundry
-import com.example.project_laundry.databinding.ActivityRegisBinding
 
 class register : AppCompatActivity() {
 
