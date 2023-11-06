@@ -14,8 +14,6 @@ class adaptersetrikalaundry(val list: ArrayList<Laundry2>, var Listener: OnClick
 
         class laundryholder(view: View) : RecyclerView.ViewHolder(view) {
             val NAMA = itemView.findViewById<TextView>(R.id.nameadapter)
-            val JENIS = itemView.findViewById<TextView>(R.id.jenisadapter)
-            val ESTIMASI = itemView.findViewById<TextView>(R.id.estimasiadapter)
             val TITIK3 = itemView.findViewById<Button>(R.id.titik3)
             val EDIT = itemView.findViewById<Button>(R.id.edit)
         }
@@ -32,8 +30,6 @@ class adaptersetrikalaundry(val list: ArrayList<Laundry2>, var Listener: OnClick
 
         override fun onBindViewHolder(holder: laundryholder, position: Int) {
             holder.NAMA.text  = list[position].nama
-            holder.JENIS.text = list[position].jenis
-            holder.ESTIMASI.text = list[position].detail
             holder.TITIK3.setOnClickListener(){
                 Listener.onDetail(list[position])}
             holder.EDIT.setOnClickListener(){

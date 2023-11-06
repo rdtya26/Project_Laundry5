@@ -4,10 +4,12 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.project_laundry.register
 
 @Database(entities = [Laundry::class], [Laundry2::class], version = 2)
 abstract class database_laundry : RoomDatabase(){
     abstract fun laundrydao() : LaundryDAO
+
 
     companion object{
 

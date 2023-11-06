@@ -23,11 +23,6 @@ class inputlaundry : AppCompatActivity() {
             this.insertcucian()
         }
     }
-
-
-
-
-
     private fun insertcucian(){
         CoroutineScope(Dispatchers.IO).launch {
             db.laundrydao().simpan(
