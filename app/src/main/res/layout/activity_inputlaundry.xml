@@ -86,78 +86,43 @@
     <EditText
         android:id="@+id/inputnamacuci"
         android:layout_width="234dp"
-        android:layout_height="31dp"
-        android:hint="Nama"
-        android:gravity="center"
-        android:background="@drawable/bgbiru"
+        android:layout_height="48dp"
         android:layout_marginTop="220dp"
+        android:background="@drawable/bgbiru"
+        android:gravity="center"
+        android:hint="Nama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/inputnocuci"
         android:layout_width="234dp"
-        android:layout_height="31dp"
-        android:hint="No Hp"
-        android:gravity="center"
-        android:background="@drawable/bgbiru"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/bgbiru"
+        android:gravity="center"
+        android:hint="No Hp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputnamacuci" />
+
     <EditText
         android:id="@+id/inputberatcuci"
         android:layout_width="234dp"
-        android:layout_height="31dp"
-        android:hint="Berat"
-        android:gravity="center"
-        android:background="@drawable/bgbiru"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/bgbiru"
+        android:gravity="center"
+        android:hint="Berat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputnocuci" />
 
-
-    <Spinner
-        android:id="@+id/planets_spinner"
-        android:layout_width="234dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/bgbiru"
-        android:spinnerMode="dropdown"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputberatcuci" />
-
-    <EditText
-        android:id="@+id/inputdetailcuci"
-        android:layout_width="234dp"
-        android:layout_height="31dp"
-        android:hint="Detail"
-        android:gravity="center"
-        android:background="@drawable/bgbiru"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/planets_spinner" />
-    <EditText
-        android:id="@+id/inputvariancuci"
-        android:layout_width="234dp"
-        android:layout_height="31dp"
-        android:hint="Varian"
-        android:gravity="center"
-        android:background="@drawable/bgbiru"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputdetailcuci" />
-
     <Button
         android:id="@+id/inputcuci"
         android:layout_width="140dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:backgroundTint="#0D4394"
         android:text="input"
         app:layout_constraintBottom_toBottomOf="parent"

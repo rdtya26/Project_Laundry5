@@ -2,9 +2,9 @@ package com.example.project_laundry
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.project_laundry.ROOM.Laundry
-import com.example.project_laundry.ROOM.Laundry2
-import com.example.project_laundry.ROOM.database_laundry
+import android.widget.ArrayAdapter
+import android.widget.Spinner
+import com.example.project_laundry.ROOM.*
 import com.example.project_laundry.databinding.ActivityInputlaundryBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -23,6 +23,11 @@ class inputlaundry : AppCompatActivity() {
             this.insertcucian()
         }
     }
+
+
+
+
+
     private fun insertcucian(){
         CoroutineScope(Dispatchers.IO).launch {
             db.laundrydao().simpan(
@@ -31,9 +36,7 @@ class inputlaundry : AppCompatActivity() {
                     binding.inputnamacuci.text.toString(),
                     binding.inputnocuci.text.toString().toInt(),
                     binding.inputberatcuci.text.toString(),
-                    binding.inputjeniscuci.text.toString(),
-                    binding.inputdetailcuci.text.toString(),
-                    binding.inputvariancuci.text.toString()
+
                 )
             )
         }
@@ -46,9 +49,7 @@ class inputlaundry : AppCompatActivity() {
                     binding.inputnamacuci.text.toString(),
                     binding.inputnocuci.text.toString().toInt(),
                     binding.inputberatcuci.text.toString(),
-                    binding.inputjeniscuci.text.toString(),
-                    binding.inputdetailcuci.text.toString(),
-                    binding.inputvariancuci.text.toString()
+
                 )
             )
         }
@@ -58,6 +59,5 @@ class inputlaundry : AppCompatActivity() {
         super.onResume()
         this.insertsetrika()
     }
-
 
 }

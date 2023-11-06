@@ -23,29 +23,23 @@ class edit_laundry : AppCompatActivity() {
 
         binding.editlaundry.setOnClickListener {
             if(binding.inputnamaedit.text.isNotEmpty() &&
-               binding.inputjenisedit.text.isNotEmpty() &&
-               binding.inputdetailedit.text.isNotEmpty() &&
-               binding.inputberatedit.text.isNotEmpty() &&
-               binding.inputnoedit.text.isNotEmpty() &&
-               binding.inputpewangiedit.text.isNotEmpty()
+                binding.inputnoedit.text.isNotEmpty() &&
+               binding.inputberatedit.text.isNotEmpty()
+
             ){
 
                 database.laundrydao().ubah2(
                     Laundry2(0,
                         binding.inputnamaedit.text.toString(),
                         binding.inputnoedit.text.toString().toInt(),
-                        binding.inputjenisedit.text.toString(),
-                        binding.inputberatedit.text.toString(),
-                        binding.inputpewangiedit.text.toString(),
-                        binding.inputpewangiedit.text.toString()
+                        binding.inputjenisedit.text.toString()
+
                     )
                 )
                 binding.inputnamaedit.setText("")
-                binding.inputjenisedit.setText("")
-                binding.inputdetailedit.setText("")
-                binding.inputberatedit.setText("")
                 binding.inputnoedit.setText("")
-                binding.inputpewangiedit.setText("")
+                binding.inputberatedit.setText("")
+
 
                 startActivity(
                     Intent(

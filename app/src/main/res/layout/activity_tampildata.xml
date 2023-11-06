@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/backtampildata"
-        tools:listitem="@layout/adapter"></androidx.recyclerview.widget.RecyclerView>
+        tools:listitem="@layout/adapter"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listsetrika"
