@@ -13,11 +13,11 @@ class adapterlaundry(val list: ArrayList<Laundry>, var Listener: OnClickListener
     RecyclerView.Adapter<adapterlaundry.laundryholder>(){
 
         class laundryholder(view: View) : RecyclerView.ViewHolder(view) {
+            val ID = itemView.findViewById<TextView>(R.id.idadapter1)
             val NAMA = itemView.findViewById<TextView>(R.id.nameadapter)
-            val JENIS = itemView.findViewById<TextView>(R.id.jenisadapter)
-            val ESTIMASI = itemView.findViewById<TextView>(R.id.estimasiadapter)
             val TITIK3 = itemView.findViewById<Button>(R.id.titik3)
             val EDIT = itemView.findViewById<Button>(R.id.edit)
+            val hapus = itemView.findViewById<Button>(R.id.hapus)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): laundryholder {
@@ -31,14 +31,16 @@ class adapterlaundry(val list: ArrayList<Laundry>, var Listener: OnClickListener
         }
 
         override fun onBindViewHolder(holder: laundryholder, position: Int) {
+
             holder.NAMA.text  = list[position].namacuci
-            holder.JENIS.text = list[position].jenis
-            holder.ESTIMASI.text = list[position].Detail
             holder.TITIK3.setOnClickListener(){
                 Listener.onDetail(list[position])}
             holder.EDIT.setOnClickListener(){
-                Listener.onEdit(list[position])
+                Listener.onEdit(list[position])}
+            holder.hapus.setOnClickListener(){
+                Listener.onhapus(list[position])
             }
+
         }
 
         override fun getItemCount(): Int {
@@ -48,6 +50,7 @@ class adapterlaundry(val list: ArrayList<Laundry>, var Listener: OnClickListener
     interface OnClickListener{
         fun onDetail (laundry: Laundry)
         fun onEdit (laundry: Laundry)
+        fun onhapus(laundry: Laundry)
     }
     }
 

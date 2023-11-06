@@ -16,6 +16,7 @@ class adaptersetrikalaundry(val list: ArrayList<Laundry2>, var Listener: OnClick
             val NAMA = itemView.findViewById<TextView>(R.id.nameadapter)
             val TITIK3 = itemView.findViewById<Button>(R.id.titik3)
             val EDIT = itemView.findViewById<Button>(R.id.edit)
+            val hapus = itemView.findViewById<Button>(R.id.hapus)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): laundryholder {
@@ -33,7 +34,9 @@ class adaptersetrikalaundry(val list: ArrayList<Laundry2>, var Listener: OnClick
             holder.TITIK3.setOnClickListener(){
                 Listener.onDetail(list[position])}
             holder.EDIT.setOnClickListener(){
-                Listener.onEdit(list[position])
+                Listener.onEdit(list[position])}
+            holder.hapus.setOnClickListener(){
+                Listener.onhapus(list[position])
             }
         }
 
@@ -44,6 +47,7 @@ class adaptersetrikalaundry(val list: ArrayList<Laundry2>, var Listener: OnClick
     interface OnClickListener{
         fun onDetail (laundry2: Laundry2)
         fun onEdit (laundry2: Laundry2)
+        fun onhapus(laundry2: Laundry2)
     }
     }
 
