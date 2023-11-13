@@ -23,17 +23,15 @@ interface LaundryDAO {
     fun simpan2(vararg laundry2: Laundry2)
 
     @Update
-    fun ubah2(vararg laundry2: Laundry2)
+   fun updatedata (vararg laundry2: Laundry2)
 
     @Delete
-    fun hapus2(vararg laundry2: Laundry2)
+    fun deletedata(vararg laundry2: Laundry2)
 
    @Query("Select * From tb_setrika")
    fun getAll2(laundry2: Laundry2)
 
     //Register
-    @Insert
-    fun simpanregis(vararg register: Register)
 
 
 

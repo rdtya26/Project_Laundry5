@@ -28,11 +28,11 @@ class edit_laundry : AppCompatActivity() {
 
             ){
 
-                database.laundrydao().ubah2(
+                database.laundrydao().updatedata(
                     Laundry2(0,
                         binding.inputnamaedit.text.toString(),
                         binding.inputnoedit.text.toString().toInt(),
-                        binding.inputjenisedit.text.toString()
+                        binding.inputberatedit.text.toString().toInt()
 
                     )
                 )
