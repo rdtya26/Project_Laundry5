@@ -19,7 +19,7 @@ class inputlaundry : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityInputlaundryBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.inputcuci.setOnClickListener {
+        binding.inputlaundry.setOnClickListener {
             this.insertcucian()
         }
     }
@@ -30,7 +30,7 @@ class inputlaundry : AppCompatActivity() {
                     idcuci = 0,
                     binding.inputnamacuci.text.toString(),
                     binding.inputnocuci.text.toString().toInt(),
-                    binding.inputberatcuci.text.toString(),
+                    binding.inputberatcuci.text.toString().toInt()
 
                 )
             )
@@ -43,7 +43,7 @@ class inputlaundry : AppCompatActivity() {
                     id = 0,
                     binding.inputnamacuci.text.toString(),
                     binding.inputnocuci.text.toString().toInt(),
-                    binding.inputberatcuci.text.toString(),
+                    binding.inputberatcuci.text.toString().toInt()
 
                 )
             )

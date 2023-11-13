@@ -4,38 +4,36 @@ import androidx.room.*
 
 @Dao
 interface LaundryDAO {
-    //laundrycuci
     @Insert
-    fun simpan(laundry: Laundry)
+    fun simpan(vararg laundry: Laundry)
 
     @Update
-    fun ubah (laundry: Laundry)
+    fun ubah (vararg laundry: Laundry)
 
 
     @Delete
-    fun hapus (laundry: Laundry)
+    fun hapus (vararg laundry: Laundry)
 
 
-    @Query ("SELECT * FROM TB_Laundry")
+    @Query ("Select * From tb_cuci")
     fun getAll(): List<Laundry>
 
 
-    //laundrysetrika
     @Insert
-    fun simpan2(laundry2: Laundry2)
+    fun simpan2(vararg laundry2: Laundry2)
 
     @Update
-    fun ubah2(laundry2: Laundry2)
+    fun ubah2(vararg laundry2: Laundry2)
 
     @Delete
-    fun hapus2(laundry2: Laundry2)
+    fun hapus2(vararg laundry2: Laundry2)
 
-    @Query ("SELECT * FROM TB_Laundry2")
-    fun getAll2(): List<Laundry2>
+   @Query("Select * From tb_setrika")
+   fun getAll2(laundry2: Laundry2)
 
     //Register
     @Insert
-    fun simpanregis(register: Register)
+    fun simpanregis(vararg register: Register)
 
 
 

@@ -38,7 +38,11 @@ class tampildata : AppCompatActivity() {
                 override fun onEdit(laundry: Laundry) {
                 updateData(laundry)
             }
-        }
+
+                override fun onhapus(laundry: Laundry) {
+                    hapus(laundry)
+                }
+            }
 
         )
         binding.listcuci.adapter = adapterlaundry
@@ -56,6 +60,21 @@ class tampildata : AppCompatActivity() {
             )
         }
     }
+    private fun hapus(laundry: Laundry){
+        val dialog = AlertDialog.Builder(this)
+        dialog.apply {
+            setTitle("konfimasi")
+            setMessage("apakah kamu yakin akan menghapus")
+            setNegativeButton("batal"){
+                dialogInterface:DialogInterface,i:Int->
+                dialogInterface.dismiss()
+            }
+        }
+        dialog.show()
+    }
+
+
+
     private fun detail(laundry: Laundry){
         val dialog = AlertDialog.Builder(this)
         dialog.apply {
